@@ -3,7 +3,7 @@ import {
   type MagicPayGatewayConfig,
   type MagicPayMemoryRequestKind,
   type MagicPayMemoryRequestedField,
-} from '@aftercard-ai/magicpay-sdk';
+} from '@aftercard/magicpay-sdk';
 
 export interface RootClientBridgeInput {
   pageRef?: string;

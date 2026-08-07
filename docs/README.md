@@ -1,6 +1,6 @@
 # MagicPay SDK Docs
 
-This documentation is for integrators using `@aftercard-ai/magicpay-sdk` from a
+This documentation is for integrators using `@aftercard/magicpay-sdk` from a
 trusted Node or TypeScript runtime.
 
 The current runtime flow is:

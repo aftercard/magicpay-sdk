@@ -1,6 +1,6 @@
-# @aftercard-ai/magicpay-sdk
+# @aftercard/magicpay-sdk
 
-[![npm version](https://img.shields.io/npm/v/@aftercard-ai/magicpay-sdk)](https://www.npmjs.com/package/@aftercard-ai/magicpay-sdk) [![License](https://img.shields.io/badge/license-proprietary-red.svg)](LICENSE.md) [![Node.js >= 18](https://img.shields.io/badge/node-%3E%3D18-brightgreen.svg)](https://nodejs.org)
+[![npm version](https://img.shields.io/npm/v/@aftercard/magicpay-sdk)](https://www.npmjs.com/package/@aftercard/magicpay-sdk) [![License](https://img.shields.io/badge/license-proprietary-red.svg)](LICENSE.md) [![Node.js >= 18](https://img.shields.io/badge/node-%3E%3D18-brightgreen.svg)](https://nodejs.org)
 
 TypeScript SDK for MagicPay workflow sessions, Memory, target-agnostic
 Memory fill, user-confirmed actions, and user choices.
@@ -51,7 +51,7 @@ The model the rest of this README assumes (full version in
 ## Install
 
 ```bash
-npm i @aftercard-ai/magicpay-sdk
+npm i @aftercard/magicpay-sdk
 ```
 
 Create an API key at
@@ -67,15 +67,15 @@ https://agents-api.aftercard.ai/functions/v1/api
 
 | Entrypoint                                  | Purpose                                                                                             |
 | ------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `@aftercard-ai/magicpay-sdk`                 | Root client for sessions, Memory, Memory requests, actions, choices, and request waiting.           |
-| `@aftercard-ai/magicpay-sdk/core`            | Lower-level helpers such as Memory catalog fetch and runtime materialization.                       |
-| `@aftercard-ai/magicpay-sdk/fill-plan-apply` | Target-agnostic Memory fill helpers: `fillMemoryValue(...)`, `applyFill(...)`, and `planFill(...)`. |
-| `@aftercard-ai/magicpay-sdk/magicsearch`     | MagicSearch client helpers.                                                                         |
+| `@aftercard/magicpay-sdk`                 | Root client for sessions, Memory, Memory requests, actions, choices, and request waiting.           |
+| `@aftercard/magicpay-sdk/core`            | Lower-level helpers such as Memory catalog fetch and runtime materialization.                       |
+| `@aftercard/magicpay-sdk/fill-plan-apply` | Target-agnostic Memory fill helpers: `fillMemoryValue(...)`, `applyFill(...)`, and `planFill(...)`. |
+| `@aftercard/magicpay-sdk/magicsearch`     | MagicSearch client helpers.                                                                         |
 
 ## Quick Start
 
 ```ts
-import { createMagicPayClient } from '@aftercard-ai/magicpay-sdk';
+import { createMagicPayClient } from '@aftercard/magicpay-sdk';
 
 const client = createMagicPayClient({
   gateway: {
@@ -128,8 +128,8 @@ Use `fillMemoryValue(...)` when your code already knows the handle. The value
 exists only inside your `materializeValue` and `write` callbacks.
 
 ```ts
-import { materializeMemoryValues } from '@aftercard-ai/magicpay-sdk/core';
-import { fillMemoryValue } from '@aftercard-ai/magicpay-sdk/fill-plan-apply';
+import { materializeMemoryValues } from '@aftercard/magicpay-sdk/core';
+import { fillMemoryValue } from '@aftercard/magicpay-sdk/fill-plan-apply';
 
 await fillMemoryValue({
   handle: 'handle_api_token',
@@ -154,8 +154,8 @@ come from your own code, a stored artifact, or `planFill(...)`. The plan must
 contain handles, not raw values.
 
 ```ts
-import { materializeMemoryValues } from '@aftercard-ai/magicpay-sdk/core';
-import { applyFill, type FillPlan } from '@aftercard-ai/magicpay-sdk/fill-plan-apply';
+import { materializeMemoryValues } from '@aftercard/magicpay-sdk/core';
+import { applyFill, type FillPlan } from '@aftercard/magicpay-sdk/fill-plan-apply';
 
 const plan: FillPlan = {
   id: 'api-auth-plan',
@@ -204,8 +204,8 @@ the catalog keeps `valueVisibility: 'handles_only'` and reports the card under
 `unavailable` with `availability.status: 'authorization_required'`.
 
 ```ts
-import { fetchMemoryCatalog, materializeMemoryValues } from '@aftercard-ai/magicpay-sdk/core';
-import { applyFill, planFill } from '@aftercard-ai/magicpay-sdk/fill-plan-apply';
+import { fetchMemoryCatalog, materializeMemoryValues } from '@aftercard/magicpay-sdk/core';
+import { applyFill, planFill } from '@aftercard/magicpay-sdk/fill-plan-apply';
 
 const targetSet = {
   fingerprint: 'login-form-v1',

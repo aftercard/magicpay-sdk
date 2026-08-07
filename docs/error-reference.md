@@ -22,7 +22,7 @@ request id if another process may resume waiting later.
 Network and HTTP failures throw `MagicPayRequestError`.
 
 ```ts
-import { getMagicPayErrorDiagnostics, MagicPayRequestError } from '@aftercard-ai/magicpay-sdk';
+import { getMagicPayErrorDiagnostics, MagicPayRequestError } from '@aftercard/magicpay-sdk';
 
 try {
   await client.memory.createRequest(sessionId, input);

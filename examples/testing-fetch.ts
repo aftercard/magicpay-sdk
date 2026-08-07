@@ -1,7 +1,7 @@
 import {
   createMagicPayClient,
   type MagicPayGatewayConfig,
-} from '@aftercard-ai/magicpay-sdk';
+} from '@aftercard/magicpay-sdk';
 
 export function createMagicPayTestClient(params: {
   gateway?: MagicPayGatewayConfig;

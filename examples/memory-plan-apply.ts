@@ -1,5 +1,5 @@
-import { fetchMemoryCatalog, materializeMemoryValues } from '@aftercard-ai/magicpay-sdk/core';
-import type { MagicPayGatewayConfig } from '@aftercard-ai/magicpay-sdk';
+import { fetchMemoryCatalog, materializeMemoryValues } from '@aftercard/magicpay-sdk/core';
+import type { MagicPayGatewayConfig } from '@aftercard/magicpay-sdk';
 import {
   applyFill,
   planFill,
@@ -8,7 +8,7 @@ import {
   type FillTargetDescriptor,
   type TargetValueWriter,
   type ValueFreeMemoryCatalogSnapshot,
-} from '@aftercard-ai/magicpay-sdk/fill-plan-apply';
+} from '@aftercard/magicpay-sdk/fill-plan-apply';
 
 export interface MemoryPlanApplyExampleParams {
   gateway: MagicPayGatewayConfig;

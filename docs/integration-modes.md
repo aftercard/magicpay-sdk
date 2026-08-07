@@ -2,7 +2,7 @@
 
 ## Root Client
 
-Use `@aftercard-ai/magicpay-sdk` when you want the complete networked client:
+Use `@aftercard/magicpay-sdk` when you want the complete networked client:
 
 - workflow sessions;
 - Memory;
@@ -16,7 +16,7 @@ agent runtimes.
 
 ## Core Helpers
 
-Use `@aftercard-ai/magicpay-sdk/core` when you need lower-level helpers:
+Use `@aftercard/magicpay-sdk/core` when you need lower-level helpers:
 
 - `fetchMemoryCatalog(gateway, sessionId, url, options?)`;
 - `materializeMemoryValues(gateway, sessionId, handles, options?)`;
@@ -31,7 +31,7 @@ action is approved for the active session.
 
 ## Fill Plan / Apply
 
-Use `@aftercard-ai/magicpay-sdk/fill-plan-apply` when trusted runtime code needs
+Use `@aftercard/magicpay-sdk/fill-plan-apply` when trusted runtime code needs
 to write Memory values into a target. Targets are runtime-defined: an API
 header, a provider SDK parameter, a browser field, or another controlled write.
 
@@ -59,7 +59,7 @@ catalog and plan again.
 
 ## MagicSearch
 
-Use `@aftercard-ai/magicpay-sdk/magicsearch` for provider discovery and fallback
+Use `@aftercard/magicpay-sdk/magicsearch` for provider discovery and fallback
 URL lookup.
 
 ## What Is Not In The SDK

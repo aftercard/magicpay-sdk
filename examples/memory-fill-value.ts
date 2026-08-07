@@ -1,10 +1,10 @@
-import { materializeMemoryValues } from '@aftercard-ai/magicpay-sdk/core';
-import type { MagicPayGatewayConfig } from '@aftercard-ai/magicpay-sdk';
+import { materializeMemoryValues } from '@aftercard/magicpay-sdk/core';
+import type { MagicPayGatewayConfig } from '@aftercard/magicpay-sdk';
 import {
   fillMemoryValue,
   type FillMemoryValueResult,
   type TargetValueWriteResult,
-} from '@aftercard-ai/magicpay-sdk/fill-plan-apply';
+} from '@aftercard/magicpay-sdk/fill-plan-apply';
 
 export interface MemoryFillValueExampleParams {
   gateway: MagicPayGatewayConfig;

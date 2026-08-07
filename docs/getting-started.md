@@ -6,7 +6,7 @@ sessions, requests, handles vs values, and why fill is not commit.
 ## 1. Create a client
 
 ```ts
-import { createMagicPayClient } from '@aftercard-ai/magicpay-sdk';
+import { createMagicPayClient } from '@aftercard/magicpay-sdk';
 
 export const client = createMagicPayClient({
   gateway: {
@@ -114,8 +114,8 @@ to use. The raw value exists only inside the `materializeValue` and `write`
 callbacks.
 
 ```ts
-import { materializeMemoryValues } from '@aftercard-ai/magicpay-sdk/core';
-import { fillMemoryValue } from '@aftercard-ai/magicpay-sdk/fill-plan-apply';
+import { materializeMemoryValues } from '@aftercard/magicpay-sdk/core';
+import { fillMemoryValue } from '@aftercard/magicpay-sdk/fill-plan-apply';
 
 await fillMemoryValue({
   handle: 'handle_api_token',
@@ -142,8 +142,8 @@ Use `applyFill(...)` when the handle-only plan already exists. The plan may be
 authored by your runtime, loaded from storage, or returned by `planFill(...)`.
 
 ```ts
-import { materializeMemoryValues } from '@aftercard-ai/magicpay-sdk/core';
-import { applyFill, type FillPlan } from '@aftercard-ai/magicpay-sdk/fill-plan-apply';
+import { materializeMemoryValues } from '@aftercard/magicpay-sdk/core';
+import { applyFill, type FillPlan } from '@aftercard/magicpay-sdk/fill-plan-apply';
 
 const plan: FillPlan = {
   id: 'api-auth-plan',
@@ -196,8 +196,8 @@ This example uses a browser target adapter, but the SDK API is the same for any
 trusted target writer.
 
 ```ts
-import { fetchMemoryCatalog, materializeMemoryValues } from '@aftercard-ai/magicpay-sdk/core';
-import { applyFill, planFill } from '@aftercard-ai/magicpay-sdk/fill-plan-apply';
+import { fetchMemoryCatalog, materializeMemoryValues } from '@aftercard/magicpay-sdk/core';
+import { applyFill, planFill } from '@aftercard/magicpay-sdk/fill-plan-apply';
 
 const targetSet = {
   fingerprint: 'login-form-v1',
