@@ -14,7 +14,7 @@ import {
   isMagicPayRequestErrorStatus,
 } from '@aftercard/magicpay-sdk';
 
-const DEFAULT_API_URL = 'https://durcottggsiesxxqzvbb.supabase.co/functions/v1/api';
+const DEFAULT_API_URL = 'https://api.magicpay.aftercard.ai/functions/v1/api';
 
 async function main(): Promise<number> {
   const apiKey = process.env.MAGICPAY_API_KEY;

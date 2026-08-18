@@ -13,7 +13,7 @@ import { createMagicPayClient } from '@aftercard/magicpay-sdk';
 const client = createMagicPayClient({
   gateway: {
     apiKey: '...',
-    apiUrl: 'https://durcottggsiesxxqzvbb.supabase.co/functions/v1/api',
+    apiUrl: 'https://api.magicpay.aftercard.ai/functions/v1/api',
   },
   fetchImpl,
 });
